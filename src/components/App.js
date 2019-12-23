@@ -29,6 +29,8 @@ export default class App extends Component {
           <Controls
             nextPage={this.handleNextPage}
             prevPage={this.handlePrevPage}
+            index={this.state.publicationIndex}
+            items={publications}
           />
           <Progress
             length={publications.length}

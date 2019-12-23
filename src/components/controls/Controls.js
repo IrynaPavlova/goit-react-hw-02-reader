@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-///добавить disabled
-
-const Controls = ({ nextPage, prevPage }) => (
+const Controls = ({ nextPage, prevPage, index, items }) => (
   <>
     <section>
-      <button type="button" onClick={prevPage}>
+      <button type="button" disabled={index === 0} onClick={prevPage}>
         Назад
       </button>
-      <button type="button" onClick={nextPage}>
+      <button
+        type="button"
+        disabled={index === items.length - 1}
+        onClick={nextPage}
+      >
         Вперед
       </button>
     </section>
